@@ -1,0 +1,34 @@
+{
+  "GetStart": {
+    "1": "Kòmanse"
+  },
+  "Why": {
+    "1": "Pou gade videyo"
+  },
+  "Home": {
+    "1": "lakay"
+  },
+  "contact": {
+    "title": "ajoute yon moun ki disparèt",
+    "name": "Non",
+    "dateofbirth": "Dat nesans",
+    "age": "Laj",
+    "city": "Vil",
+    "height": "Wotè",
+    "eyesColor": "Eyes Color",
+    "missingDate": "Koulè je",
+    "lastLocation": "Denye wè",
+    "file": "Cheose File",
+    "contact": "Kontakte Non",
+    "description": "Deskripsyon / Rezime / Evènman",
+    "button": "Ajoute yon moun"
+  },
+  "contactus": "Kontakte nou",
+  "detail": "Tout detay",
+  "addperson": "Ajoute yon moun",
+  "lang": {
+    "en": "Anglè",
+    "fr": "Anglè",
+    "ht": "Kreyòl Ayisyen"
+  }
+}

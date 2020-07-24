@@ -1,0 +1,35 @@
+{
+  "GetStart": {
+    "1": "Get Started"
+  },
+  "Why": {
+    "1": "For watching THis video"
+  },
+  "Home": {
+    "1": "Home"
+  },
+  "contact": {
+    "title": "ADD A MISSING PERSON ",
+    "name": "name",
+    "dateofbirth": "Date Of Birth",
+    "age": "Age",
+    "city": "City",
+    "height": "Height",
+    "eyesColor": "Eyes Color",
+    "missingDate": "Missing Date",
+    "lastLocation": "Last Seen",
+    "file": "Cheose File",
+    "contact": "Contact No",
+    "description": "Description / Summary / Events",
+    "button": "Add Person"
+  },
+  "detail": "All Detail",
+  "contactus": "Contact Us",
+  "addperson": "Add Person",
+
+  "lang": {
+    "en": "English",
+    "fr": "french",
+    "ht": "Haitian Creole"
+  }
+}
