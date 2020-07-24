@@ -6,7 +6,10 @@
     "1": "For watching THis video"
   },
   "Home": {
-    "1": "Home"
+    "1": "Home",
+    "city": "Search By City",
+    "year": "Search By Year",
+    "found" : "Person Not Fount"
   },
   "contact": {
     "title": "ADD A MISSING PERSON ",

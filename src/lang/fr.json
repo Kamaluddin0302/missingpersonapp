@@ -6,7 +6,10 @@
     "1": "Pour regarder la vidéo"
   },
   "Home": {
-    "1": "Accueil"
+    "1": "Accueil",
+    "city": "Recherche par ville",
+    "year": "Recherche par année",
+    "found": "Personne introuvable"
   },
   "contact": {
     "title": "ajouter une personne disparue",

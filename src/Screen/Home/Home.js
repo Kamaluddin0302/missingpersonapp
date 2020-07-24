@@ -8,11 +8,11 @@ import {
   StatusBar,
   AsyncStorage,
 } from "react-native";
-import { Spinner } from "native-base";
+import { Spinner, Row } from "native-base";
 import Card from "../../Component/Cards/cards";
 import { GetData } from "../../config/function";
 import Header from "../../Component/header";
-
+import Search from "./../../Component/searchInput/SearchInput";
 import * as Localization from "expo-localization";
 import i18n from "i18n-js";
 import { en, fr, ht } from "./../../lang/index";
@@ -31,6 +31,8 @@ class Home extends React.Component {
     this.state = {
       AllPersons: [],
       lan: "en",
+      Year: "",
+      City: "",
     };
   }
 
@@ -61,9 +63,24 @@ class Home extends React.Component {
     i18n.locale = e;
     this.setState({});
   };
+
+  getSearchData = (e, name) => {
+    this.setState({
+      [name]: e,
+    });
+  };
   render() {
     let { AllPersons, City, Year } = this.state;
-
+    const filterPerson = AllPersons.filter((users) => {
+      console.log(typeof Year);
+      return (
+        users.city.toLowerCase().includes(City.toLowerCase()) &&
+        users.Year &&
+        toString(users.Year)
+          .toLowerCase()
+          .includes(toString(users.Year).toLowerCase())
+      );
+    });
     return (
       <>
         <Header
@@ -78,15 +95,36 @@ class Home extends React.Component {
         ) : (
           <ScrollView>
             <View style={styles.Container}>
-              {AllPersons &&
-                AllPersons.map((val, i) => (
+              <View style={styles.search}>
+                <Search
+                  name={i18n.t("Home.city")}
+                  keyboardType="default"
+                  getSearchData={this.getSearchData}
+                  value="City"
+                />
+                <Search
+                  name={i18n.t("Home.year")}
+                  keyboardType="numeric"
+                  getSearchData={this.getSearchData}
+                  value="Year"
+                />
+              </View>
+              {filterPerson && filterPerson.length ? (
+                filterPerson.map((val, i) => (
                   <>
                     <Card navigate={this.props} data={val} />
                     <Card navigate={this.props} data={val} />
                     <Card navigate={this.props} data={val} />
                     <Card navigate={this.props} data={val} />
                   </>
-                ))}
+                ))
+              ) : (
+                <View style={styles.notfound}>
+                  <Text style={styles.notfoundtext}>
+                    {i18n.t("Home.found")}
+                  </Text>
+                </View>
+              )}
             </View>
           </ScrollView>
         )}
@@ -98,7 +136,22 @@ class Home extends React.Component {
 const styles = StyleSheet.create({
   Container: {
     flexDirection: "row",
-    flexWrap: "wrap-reverse",
+    flexWrap: "wrap",
+  },
+  search: {
+    // flex: 1,
+    width: "100%",
+    padding: 10,
+    color: "white",
+    flexDirection: "row",
+    alignSelf: "center",
+  },
+  notfound: {
+    alignSelf: "center",
+    marginLeft: 100,
+  },
+  notfoundtext: {
+    fontSize: 20,
   },
 });
 

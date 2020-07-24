@@ -6,7 +6,10 @@
     "1": "Pou gade videyo"
   },
   "Home": {
-    "1": "lakay"
+    "1": "lakay",
+    "city": "Chèche Pa Vil",
+    "year": "Search pa ane",
+    "found": "Moun pa jwenn"
   },
   "contact": {
     "title": "ajoute yon moun ki disparèt",
