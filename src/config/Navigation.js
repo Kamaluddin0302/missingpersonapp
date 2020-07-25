@@ -3,13 +3,16 @@ import * as React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { createDrawerNavigator } from "@react-navigation/drawer";
-
+import Sidebar from "./../Component/Sidebar/Sidebar";
 const Stack = createStackNavigator();
 
 function Navigation() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Get Start">
+      <Stack.Navigator
+        initialRouteName="Get Start"
+        contentComponent={<Sidebar />}
+      >
         <Stack.Screen
           name="Home"
           component={DrawerNavigation}
